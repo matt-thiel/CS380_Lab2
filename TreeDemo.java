@@ -134,7 +134,28 @@ class BinarySearchTree{
    */
    public boolean find(Node root, int key){
 	  //implement me
-
+      if (root == null) {
+		   return false;
+	   }
+	   
+	   boolean found = false;
+	   
+	   if(root.value == key){  
+		   found = true;  
+           return found;  
+	   }
+	   
+	   // Search the left side of the tree
+	   if(found == false && root.left != null){  
+		   found = find(root.left, key);  
+	   }  
+	   
+	   // Search the right side of the tree
+	   if(found == false && root.right != null){  
+		   found = find(root.right, key);  
+	   }     
+	   
+	   return found;
    }
    
    

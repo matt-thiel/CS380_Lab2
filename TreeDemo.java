@@ -166,6 +166,19 @@ class BinarySearchTree{
    */
    public int getMin(Node root){
       //implement me
+      
+	   if (root == null) {
+		   return -1;
+	   }
+	   
+	   // create a temp node for walking through the tree
+	   Node temp = root;
+	   
+	   while (temp.left != null) {
+		   temp = temp.left;
+	   }
+	   
+	   return temp.value;
 
    }
   

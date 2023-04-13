@@ -115,7 +115,15 @@ class BinarySearchTree{
    */
    public void postOrderTraversal(Node root){
       //implement me
-	
+	    
+	   if (root == null) {
+		   return;
+	   }
+	   
+	   preOrderTraversal(root.left);
+	   preOrderTraversal(root.right);
+	   // value is accessed here
+	   System.out.println(root.value);
    }
    
    

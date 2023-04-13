@@ -96,7 +96,6 @@ class BinarySearchTree{
    */
    public void inOrderTraversal(Node root){
       //implement me
-	   
 	   if (root == null) {
 		   return;
 	   }
@@ -116,15 +115,7 @@ class BinarySearchTree{
    */
    public void postOrderTraversal(Node root){
       //implement me
-	   
-	   if (root == null) {
-		   return;
-	   }
-	   
-	   preOrderTraversal(root.left);
-	   preOrderTraversal(root.right);
-	   // value is accessed here
-	   System.out.println(root.value);
+	
    }
    
    
@@ -135,28 +126,7 @@ class BinarySearchTree{
    */
    public boolean find(Node root, int key){
 	  //implement me
-	   if (root == null) {
-		   return false;
-	   }
-	   
-	   boolean found = false;
-	   
-	   if(root.value == key){  
-		   found = true;  
-           return found;  
-	   }
-	   
-	   // Search the left side of the tree
-	   if(found == false && root.left != null){  
-		   found = find(root.left, key);  
-	   }  
-	   
-	   // Search the right side of the tree
-	   if(found == false && root.right != null){  
-		   found = find(root.right, key);  
-	   }     
-	   
-	   return found;
+
    }
    
    
@@ -167,19 +137,7 @@ class BinarySearchTree{
    */
    public int getMin(Node root){
       //implement me
-	   
-	   if (root == null) {
-		   return -1;
-	   }
-	   
-	   // create a temp node for walking through the tree
-	   Node temp = root;
-	   
-	   while (temp.left != null) {
-		   temp = temp.left;
-	   }
-	   
-	   return temp.value;
+
    }
   
   

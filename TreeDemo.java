@@ -190,6 +190,19 @@ class BinarySearchTree{
    */
    public int getMax(Node root){
 	  //implement me
+     
+	   if (root == null) {
+		   return -1;
+	   }
+	   
+	   // create a temp node for walking through the tree
+	   Node temp = root;
+	   
+	   while (temp.right != null) {
+		   temp = temp.right;
+	   }
+	   
+	   return temp.value;
    }
    
    
